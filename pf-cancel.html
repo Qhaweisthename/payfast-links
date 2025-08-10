@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Cancelled</title></head>
+  <body>
+    <p>Cancelling…</p>
+    <script>
+      var qs = location.search || "";
+      var target = "highwayhospice://payfast-cancel" + qs;
+      window.location.replace(target);
+      setTimeout(function(){
+        document.body.innerHTML =
+          '<a href="'+target+'">Tap here to return to the app</a>';
+      }, 800);
+    </script>
+  </body>
+</html>
